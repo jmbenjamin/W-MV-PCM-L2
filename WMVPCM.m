@@ -118,31 +118,7 @@ rate=rate+1;
         new_clust_cen=[new_clust_cen;temp4/temp5(k)];
     end
     new_clust_cen;
-%     
-% %     %     %update view weight
-% %     new_wv=[];
-% %     j=0;
-% %     V7=[];
-% %     for h=1:points_view
-% %         points_temp=points(:,j+1:j+view_feat(h));
-% %         new_clust_cen_temp=new_clust_cen(:,j+1:j+view_feat(h));
-% %         wf_temp=wf(:,j+1:j+view_feat(h));
-% %         V5=[];
-% %         for k=1:cluster_n
-% %             V1=bsxfun(@minus,points_temp,new_clust_cen_temp(k,:)); 
-% %             V2=V1.^2; 
-% %             V3=bsxfun(@times,u(:,k).^m,V2);
-% %             V4=bsxfun(@times,V3,wf_temp.^beta);
-% %             V5=[V5;sum(V4,1)];
-% %         end
-% %         V6=sum(V5,1);
-% %         V7=[V7 sum(V6,2)];
-% %         j=j+view_feat(h);
-% %     end
-% %     V8=V7.^(-1/(alpha-1));
-% %     V9=sum(V8,2);
-% %     new_wv=[new_wv bsxfun(@rdivide,V8,V9)];
-% 
+
 %     %update feature weight
     new_wf=[];
     j=0;
